@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         String validUsername = "wahab";
         String validPassword = "wahab";
-        int numberOfTries = 3;
+        int numberOfTries = 5;
         Scanner scanner = new Scanner(System.in);
 
         for (int i = 1; i <= numberOfTries; i++) {
@@ -21,7 +21,7 @@ public class Main {
                     break;
                 } else {
                     if (i == numberOfTries) {
-                        System.out.println("You have exceeded the try limit!");
+                        throw new Exception("Maximum attempts exceeded");
                     } else {
                         throw new Exception("Invalid credentials");
                     }
